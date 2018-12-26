@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 
+
 def create_app(test_config=None):
     #Create and instantiate the app
     app=Flask(__name__, instance_relative_config=True)
@@ -20,8 +21,8 @@ def create_app(test_config=None):
     def page():
         return "Honey Do!"
 
+    from HoneyDo import db
+    db.init_app(app)
     return app
-
-
 
 
