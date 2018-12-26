@@ -18,3 +18,23 @@ CREATE TABLE task_list(
     task_assigned INTEGER NOT NULL,
     task_status INTEGER CHECK (task_status =0 or task_status=1)
 )
+# import json
+#
+# from flask import (Flask, jsonify, request)
+# from datetime import date
+#
+# app = Flask(__name__)
+#
+#
+# @app.route('/Do', methods=('GET', 'POST'))
+# def task_list():
+#     if request.method == 'GET':
+#         task = [{"task desc": "buy milk", "task_due": "Today"}, {"task desc": "Pay EB Bill","task_due": "Tooday"}]
+#         #return '{"abc": "223", "list": [{"child": "1"}, {"child": "2"}]}'
+#         return json.dumps(task)
+#         #return "post method"
+#     return "Call Task create Method"
+#
+#
+# if __name__ == '__main__':
+#     app.run()
